@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", async (req, res) => {
   try {
     let result = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=c37b26d69f37780bf494774ca350cb6e`
+      ``
     );
     res.render("index.ejs", {
       allPost: posts,
