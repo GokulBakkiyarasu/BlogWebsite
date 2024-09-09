@@ -4,7 +4,7 @@
 
 A personal blog website that allows users to create, edit, and delete blog posts. The application dynamically fetches location-based weather data and displays it on the homepage using the OpenWeatherMap API. Built using Node.js, Express, and EJS templating for rendering dynamic HTML, this project provides a complete CRUD (Create, Read, Update, Delete) experience for blog management.
 
-![Screenshot 2024-09-09 110224](https://github.com/user-attachments/assets/786cd95e-00c0-4e74-8141-eec02e895253)
+![Screenshot 2024-09-09 110224](https://github.com/user-attachments/assets/3b5ce951-4b63-4486-afc1-613509974c67)
 
 ## Overview
 
