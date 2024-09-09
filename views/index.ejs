@@ -1,0 +1,29 @@
+
+<%- include("partials/header.ejs") %>
+<div class="hero">
+    <h1>TechEchoes</h1>
+    <p>"Hear the echoes of the tech world with our in-depth reviews, coding guides, and industry insights that
+        resonate with innovation."</p>
+</div>
+<hr>
+<div class="content">
+    <% if(locals.allPost) {%>
+        <% for(let post of allPost) {%>
+            <div class="post-card" id="post-card<%= post.id %>">
+                <img src="<%= post.imgUrl %>" alt="post-img">
+                <div class="card-body">
+                    <h5 class="card-title"><%= post.postName %></h5>
+                    <p class="card-sub"><%= post.description %></p>
+                    <a href="/<%= post.id %>" class="card-button">Read More<i class="fa-duotone fa-solid fa-angles-right"></i></a>
+                    <a href="/edit/<%= post.id %>" class="card-edit"><i class="fa-solid fa-gear" style="color: #404040;"></i></a>
+                    <a href="/" class="card-delete" id="<%= post.id %>" onclick="_delete(this)"><i class="fa-solid fa-trash fa-shake"></i></a>
+                </div>
+            </div>
+    <% } } else { %>
+        <div></div>
+        <% } %>
+</div>
+<a href="/create" class="add-post">Add Posts..</a>
+<%- include("partials/footer.ejs") %>
+
+

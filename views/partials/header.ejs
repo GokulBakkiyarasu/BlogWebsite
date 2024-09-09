@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/feb6b719a4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Blogs</title>
+</head>
+<body>
+    <div class="navBar">
+        <div class="navBar-left">
+            <% if(locals.isAbout) { %>
+                <h3>About</h3>
+            <% } else if(locals.isContact) { %>
+                <h3>Contact Me</h3>
+            <% } else{ %>
+                <h3 style="display: inline;">Blog's</h3>
+                <% if(locals.climate) {%>
+                    <% if(climate <= 300 ) { %>
+                        <i class="fa-solid fa-cloud-bolt" style="color: white;"></i>
+                    <% } else if(climate <= 500) { %>
+                    <i class="fa-solid fa-cloud-drizzle" style="color: white;"></i>
+                    <% } else if(climate <= 600||climate<800) {%>
+                        <i class="fa-solid fa-cloud-rain" style="color: white;"></i>
+                    <% } else if(climate <= 700) {%>
+                        <i class="fa-solid fa-snowflake" style="color: white;"></i>
+                    <% } else if(climate === 800 ) {%>
+                        <i class="fa-solid fa-sun" style="color: white;"></i>
+                    <% } else if(climate >= 800) {%>
+                        <i class="fa-solid fa-cloud" style="color: white;"></i>
+                    <% }else{ %>
+                        <i class="fa-solid fa-face-thinking" style="color: white;"></i>
+                    <% } %>
+            <% } }%>
+
+
+        </div>
+        <div class="navBar-right">
+            <a href="/">Home</a>
+            <a href="/create" class="create-post">Add Post</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>  
+    </div>
+    <script src="/js/delete.js" type="text/javascript"></script>
+</body>
+</html>

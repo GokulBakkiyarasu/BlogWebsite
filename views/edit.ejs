@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="blog-form">
+                <h1>Edit Post</h1>
+                <hr>
+                <form method="POST" action="<%= `/edit/${post.id}` %>">
+                    <label for="postName">Blog Name: </label>
+                    <input type="text" name="postName" value="<%= post.postName %>" required>
+                    <label for="description">Description: </label>
+                    <input type="text" name="description" value="<%= post.description %>" required>
+                    <label for="imgUrl">Image URL: </label>
+                    <input type="url" name="imgUrl" value="<%= post.imgUrl %>" required>
+                    <label for="detail">Write About Your Post: </label>
+                    <textarea name="detail" cols="20" rows="6" required><%= post.detail %></textarea>
+                    <button>Submit</button>
+                </form>
+    </div>
+
+    <%- include("partials/footer.ejs") %>
