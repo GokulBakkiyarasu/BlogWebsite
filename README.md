@@ -1,5 +1,3 @@
-Here’s an updated README for your **Blog Website** project in the same format as your **Book Notes Catalog** README:
-
 ---
 
 # Blog Website 📝
